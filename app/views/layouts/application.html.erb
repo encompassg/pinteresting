@@ -2,7 +2,12 @@
 <html>
 <head>
   <title>Pinteresting</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= link_to "Home", root_path %>
+  <%= link_to "About", about_path %>
+  <div class="container">
+  		<%= yield %>
+  </div>
+  <%= stylesheet_link_tag    'defaults', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'defaults', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -13,3 +18,5 @@
 
 </body>
 </html>
+<%= render 'layouts/header' %>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
